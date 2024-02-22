@@ -1,0 +1,46 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/mixins.scss';
+@import '../../styles.scss';
+
+nav{
+    width: 232px;
+    height: 100vh;
+    background-color: $blue_2;
+    @include display(center, space-around, column);
+
+    >div{
+        @include display(center, center, column);
+        width: 100%;
+        gap: 12px;
+        >a{
+            @include display(center, center, row);
+            gap: 12px;
+            padding: 8px 0;
+            width: 100%;
+            text-decoration: none;
+            font-family: $baloo;
+            color: $grey_3;
+            &:hover{
+                background-color: $blue_3;
+            }
+        }
+    }
+}
+
+span{
+    min-width: 100px;
+}
+
+.bottomContent{
+    >a{
+        justify-content: center !important;
+        &:hover{
+            background-color: $blue_2 !important;
+            color: $blue_4;
+        }
+    } 
+}
+
+.active{
+    background-color: $blue_1 !important;
+}
